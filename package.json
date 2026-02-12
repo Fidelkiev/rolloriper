@@ -1,0 +1,48 @@
+{
+  "name": "shoriprofen-vercel",
+  "version": "1.0.0",
+  "description": "Штори ПроФен - Static version for Vercel deployment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "three": "^0.150.0",
+    "@react-three/fiber": "^8.0.0",
+    "@react-three/drei": "^9.0.0",
+    "framer-motion": "^10.0.0",
+    "lucide-react": "^0.292.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.9.0",
+    "tailwindcss": "^3.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
+  },
+  "keywords": [
+    "шторы",
+    "жалюзи",
+    "рольшторы",
+    "ар-визуализация",
+    "конфигуратор",
+    "vercel",
+    "nextjs"
+  ],
+  "author": "Штори ПроФен",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorizonts-projects/shoriprofen"
+  },
+  "homepage": "https://shoriprofen.vercel.app"
+}

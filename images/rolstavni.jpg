@@ -1,0 +1,29 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shutter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#95a5a6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#bdc3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#95a5a6;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="slats" x="0" y="0" width="400" height="15" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="400" height="12" fill="url(#shutter)" rx="2"/>
+      <rect x="0" y="12" width="400" height="3" fill="#7f8c8d"/>
+    </pattern>
+  </defs>
+  
+  <!-- Building wall -->
+  <rect x="0" y="0" width="400" height="300" fill="#ecf0f1"/>
+  
+  <!-- Roller shutter -->
+  <rect x="80" y="50" width="240" height="200" fill="url(#slats)"/>
+  
+  <!-- Shutter box -->
+  <rect x="70" y="40" width="260" height="20" fill="#34495e" rx="3"/>
+  
+  <!-- Guide rails -->
+  <rect x="75" y="60" width="5" height="180" fill="#2c3e50"/>
+  <rect x="320" y="60" width="5" height="180" fill="#2c3e50"/>
+  
+  <!-- Title -->
+  <text x="200" y="295" text-anchor="middle" font-family="Arial" font-size="16" fill="#2c3e50">Рольставни</text>
+</svg>

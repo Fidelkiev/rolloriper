@@ -1,0 +1,42 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="door" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b6f47;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0826d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#4682b4;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="300" fill="#ecf0f1"/>
+  
+  <!-- Window with roller shutter -->
+  <rect x="50" y="40" width="120" height="100" fill="url(#glass)" stroke="#8b7355" stroke-width="4"/>
+  <rect x="45" y="35" width="130" height="8" fill="#34495e" rx="4"/>
+  <rect x="55" y="45" width="110" height="90" fill="#95a5a6" opacity="0.7"/>
+  
+  <!-- Door with roller shutter -->
+  <rect x="220" y="80" width="80" height="180" fill="url(#door)"/>
+  <rect x="215" y="75" width="90" height="8" fill="#34495e" rx="4"/>
+  <rect x="225" y="85" width="70" height="170" fill="#95a5a6" opacity="0.7"/>
+  <circle cx="280" cy="170" r="3" fill="#2c3e50"/>
+  
+  <!-- Window blinds detail -->
+  <g opacity="0.8">
+    <rect x="55" y="50" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="60" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="70" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="80" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="90" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="100" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="110" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="120" width="110" height="5" fill="#7f8c8d"/>
+    <rect x="55" y="130" width="110" height="5" fill="#7f8c8d"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="295" text-anchor="middle" font-family="Arial" font-size="16" fill="#2c3e50">Окна & Двери</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg width="300" height="250" viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="premiumFabric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="premiumPleats" x="0" y="0" width="12" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,0 Q6,10 0,20" stroke="#8e44ad" stroke-width="1.5" fill="none" opacity="0.8"/>
+      <path d="M12,0 Q6,10 12,20" stroke="#8e44ad" stroke-width="1.5" fill="none" opacity="0.8"/>
+    </pattern>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Luxury window frame -->
+  <rect x="25" y="15" width="250" height="190" fill="#f8f9fa" stroke="#2c3e50" stroke-width="8" rx="2"/>
+  <line x1="150" y1="15" x2="150" y2="205" stroke="#2c3e50" stroke-width="4"/>
+  <line x1="25" y1="110" x2="275" y2="110" stroke="#2c3e50" stroke-width="4"/>
+  
+  <!-- Premium pleated blinds with shadow effect -->
+  <rect x="35" y="25" width="230" height="170" fill="url(#premiumPleats)" filter="url(#shadow)"/>
+  <rect x="35" y="25" width="230" height="170" fill="url(#premiumFabric)" opacity="0.4"/>
+  
+  <!-- Motorized control -->
+  <rect x="140" y="215" width="20" height="15" fill="#34495e" rx="3"/>
+  <circle cx="150" cy="237" r="6" fill="#f39c12"/>
+  <path d="M147,237 L150,234 L153,237 L150,240 Z" fill="#fff"/>
+  
+  <!-- Premium indicator -->
+  <circle cx="250" cy="30" r="8" fill="#f39c12"/>
+  <text x="250" y="35" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#fff">P</text>
+  
+  <!-- Title -->
+  <text x="150" y="245" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2c3e50">Плиссе Премиум</text>
+</svg>

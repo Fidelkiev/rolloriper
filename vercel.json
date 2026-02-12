@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "name": "shoriprofen",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/designfinder",
+      "destination": "/design",
+      "permanent": true
+    },
+    {
+      "source": "/configurator",
+      "destination": "/configure",
+      "permanent": true
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://shoriprofen.vercel.app",
+    "NEXT_PUBLIC_API_URL": "https://shoriprofen.vercel.app/api"
+  }
+}
