@@ -1,274 +1,606 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Штори ПроФен - Солнцезащитные системы в Украине</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Штори ПроФен - Професійні штори та жалюзі в Києві</title>
+    <meta name="description" content="Професійні штори, жалюзі та рольштори в Києві. Встановлення, гарантія, безкоштовний замір. AR-візуалізація, конфігуратор онлайн.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0073aa;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #0073aa;
+        }
+        
+        .cta-button {
+            background: #0073aa;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #005a87;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #0073aa;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0073aa;
+        }
+        
+        /* AR Section */
+        .ar-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .ar-demo {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .ar-placeholder {
+            width: 100%;
+            height: 400px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0073aa;
+        }
+        
+        .submit-btn {
+            background: #0073aa;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #005a87;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #0073aa;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #0073aa;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            background: #0073aa;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #005a87;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo">
-                    <img src="images/logo.svg" alt="Штори ПроФен">
-                </div>
-                <div class="contacts">
-                    <a href="tel:+380501234567" class="phone">+38 (050) 123-45-67</a>
-                    <a href="mailto:info@shoriprofen.ua" class="email">info@shoriprofen.ua</a>
-                </div>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#plisse">Плиссе</a></li>
-                    <li><a href="#rolstavni">Рольставни</a></li>
-                    <li><a href="#rolshtory">Рольшторы</a></li>
-                    <li><a href="#zhalyuzi">Жалюзи</a></li>
-                    <li><a href="#markizy">Маркизы</a></li>
-                    <li><a href="#windows">Окна & Двери</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">🪟 Штори ПроФен</div>
+            <ul class="nav-links">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#products">Продукція</a></li>
+                <li><a href="#ar">AR-візуалізація</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Замовити</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Современные солнцезащитные системы для вашего дома</h1>
-                    <p>Качественные рольставни, плиссе, маркизы и жалюзи от ведущих производителей</p>
-                    <a href="#categories" class="btn btn-primary">Смотреть каталог</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Професійні штори та жалюзі</h1>
+            <p>AR-візуалізація • Конфігуратор онлайн • Встановлення під ключ</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">Обрати штори</a>
+                <a href="#ar" class="btn-secondary">Спробувати AR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Чому обирають нас</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🥽</div>
+                    <h3>AR-візуалізація</h3>
+                    <p>Побачте, як штори виглядатимуть у вашому інтер'єрі до покупки</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Конфігуратор</h3>
+                    <p>Створіть ідеальні штори онлайн з тисячами варіантів</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Встановлення</h3>
+                    <p>Професійний монтаж та гарантія на всі роботи</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="categories" id="categories">
-            <div class="container">
-                <h2>Категории товаров</h2>
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <img src="images/plisse.jpg" alt="Плиссе">
-                        <h3>Плиссе</h3>
-                        <p>Элегантные тканевые шторы в складку для любых окон</p>
-                        <a href="#" class="btn btn-secondary">Смотреть каталог</a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/rolstavni.jpg" alt="Рольставни">
-                        <h3>Рольставни</h3>
-                        <p>Надежная защита от солнца и посторонних взглядов</p>
-                        <a href="#" class="btn btn-secondary">Смотреть каталог</a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/rolshtory.jpg" alt="Рольшторы">
-                        <h3>Рольшторы</h3>
-                        <p>Компактные рулонные шторы для современного интерьера</p>
-                        <a href="#" class="btn btn-secondary">Смотреть каталог</a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/zhalyuzi.jpg" alt="Жалюзи">
-                        <h3>Жалюзи</h3>
-                        <p>Классические горизонтальные и вертикальные жалюзи</p>
-                        <a href="#" class="btn btn-secondary">Смотреть каталог</a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/markizy.jpg" alt="Маркизы">
-                        <h3>Маркизы</h3>
-                        <p>Уличные маркизы для террас и кафе</p>
-                        <a href="#" class="btn btn-secondary">Смотреть каталог</a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/windows.jpg" alt="Окна & Двери">
-                        <h3>Окна & Двери</h3>
-                        <p>Роллеты для окон и дверей любой конструкции</p>
-                        <a href="#" class="btn btn-secondary">Смотреть каталог</a>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Наша продукція</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🪟</div>
+                    <div class="product-info">
+                        <h3>Римські штори</h3>
+                        <p>Сучасний дизайн та зручне керування</p>
+                        <div class="product-price">від 1 500 грн</div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="popular-products">
-            <div class="container">
-                <h2>Топ-3 модели плиссе</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <img src="images/product1.jpg" alt="Плиссе Эко">
-                        <h3>Плиссе Эко</h3>
-                        <div class="price">от 2 500 ₴</div>
-                        <ul class="features">
-                            <li>Материал: полиэстер</li>
-                            <li>Механизм: ручной</li>
-                            <li>Крепление: на створку</li>
-                            <li>Цвета: 15 вариантов</li>
-                            <li>Гарантия: 2 года</li>
-                        </ul>
-                        <a href="configurator.html" class="btn btn-primary">Настроить</a>
+                <div class="product-card">
+                    <div class="product-image">🪟</div>
+                    <div class="product-info">
+                        <h3>Горизонтальні жалюзі</h3>
+                        <p>Класичний варіант для будь-якого інтер'єру</p>
+                        <div class="product-price">від 800 грн</div>
                     </div>
-                    <div class="product-card">
-                        <img src="images/product2.jpg" alt="Плиссе Премиум">
-                        <h3>Плиссе Премиум</h3>
-                        <div class="price">от 4 200 ₴</div>
-                        <ul class="features">
-                            <li>Материал: полиэстер премиум</li>
-                            <li>Механизм: автоматический</li>
-                            <li>Крепление: потолочное</li>
-                            <li>Цвета: 25 вариантов</li>
-                            <li>Гарантия: 5 лет</li>
-                        </ul>
-                        <a href="configurator.html" class="btn btn-primary">Настроить</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪟</div>
+                    <div class="product-info">
+                        <h3>Рольштори</h3>
+                        <p>Компактні та стильні рішення для вікон</p>
+                        <div class="product-price">від 1 200 грн</div>
                     </div>
-                    <div class="product-card">
-                        <img src="images/product3.jpg" alt="Плиссе Дуо">
-                        <h3>Плиссе Дуо</h3>
-                        <div class="price">от 5 800 ₴</div>
-                        <ul class="features">
-                            <li>Материал: двойная ткань</li>
-                            <li>Механизм: смешанный</li>
-                            <li>Крепление: универсальное</li>
-                            <li>Цвета: 30 вариантов</li>
-                            <li>Гарантия: 3 года</li>
-                        </ul>
-                        <a href="configurator.html" class="btn btn-primary">Настроить</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪟</div>
+                    <div class="product-info">
+                        <h3>Вертикальні жалюзі</h3>
+                        <p>Ідеально для великих вікон та балконів</p>
+                        <div class="product-price">від 1 000 грн</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="brands">
-            <div class="container">
-                <h2>Наши бренды</h2>
-                <div class="brands-grid">
-                    <div class="brand-item">
-                        <img src="images/hornet.svg" alt="Hornet">
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/alutech.svg" alt="Alutech">
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/somfy.svg" alt="Somfy">
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/luxaflex.svg" alt="Luxaflex">
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/hunterdouglas.svg" alt="Hunter Douglas">
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/kawne.svg" alt="Kawne">
-                    </div>
+    <!-- AR Section -->
+    <section id="ar" class="ar-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">AR-візуалізація</h2>
+            <p>Спробуйте штори у вашому інтер'єрі через камеру смартфона</p>
+            <div class="ar-demo">
+                <div class="ar-placeholder">
+                    📱 AR-демо буде доступно після повного запуску
+                </div>
+                <div style="margin-top: 2rem;">
+                    <button class="btn-primary" onclick="alert('AR-функція в розробці!')">
+                        Спробувати AR-камеру
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="about">
-            <div class="container">
-                <h2>Кто мы?</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Штори ПроФен - ведущий поставщик солнцезащитных систем в Украине с 2010 года. Мы предлагаем современные решения для защиты от солнца, объединяя немецкое качество и украинское гостеприимство.</p>
-                        <div class="stats">
-                            <div class="stat-item">
-                                <div class="stat-number">14</div>
-                                <div class="stat-label">лет на рынке</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">5000+</div>
-                                <div class="stat-label">довольных клиентов</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">25</div>
-                                <div class="stat-label">городов присутствия</div>
-                            </div>
-                        </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Зв'яжіться з нами</h2>
+            <div class="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Ваше ім'я</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Надіслати заявку</button>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="faq">
-            <div class="container">
-                <h2>Частые вопросы</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Как заказать солнцезащитные системы?</h3>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Оставьте заявку на сайте или позвоните нам. Наш менеджер свяжется с вами для консультации и замера.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Какие сроки изготовления?</h3>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Стандартные изделия изготавливаются 7-10 рабочих дней. Срочные заказы - 3-5 дней.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Предоставляете ли вы гарантию?</h3>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Да, мы предоставляем гарантию от 2 до 5 лет в зависимости от типа продукции.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Осуществляете ли доставку по Украине?</h3>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Да, доставляем по всей Украине транспортными компаниями "Новая Почта" и "Укрпочта".</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Можно ли заказать выезд замерщика?</h3>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Да, в Киеве и областных центрах мы предоставляем услугу бесплатного выезда замерщика.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Контакты</h3>
-                    <p>Тел: +38 (050) 123-45-67</p>
-                    <p>Email: info@shoriprofen.ua</p>
-                    <p>Адрес: г. Киев, ул. Промышленная, 15</p>
+                    <h3>Про нас</h3>
+                    <p>Штори ПроФен - це професійні рішення для вашого дому з 2010 року.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Меню</h3>
+                    <h3>Послуги</h3>
                     <ul>
-                        <li><a href="#plisse">Плиссе</a></li>
-                        <li><a href="#rolstavni">Рольставни</a></li>
-                        <li><a href="#rolshtory">Рольшторы</a></li>
-                        <li><a href="#zhalyuzi">Жалюзи</a></li>
-                        <li><a href="#markizy">Маркизы</a></li>
+                        <li><a href="#">Виготовлення штор</a></li>
+                        <li><a href="#">Встановлення</a></li>
+                        <li><a href="#">AR-візуалізація</a></li>
+                        <li><a href="#">Дизайн-проект</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Гарантия</h3>
-                    <p>Мы гарантируем качество всех наших изделий и предоставляем официальную гарантию от производителя.</p>
+                    <h3>Контакти</h3>
+                    <p>📞 +380 44 123 4567</p>
+                    <p>📧 info@shoriprofen.ua</p>
+                    <p>📍 вул. Хрещатик, 1, Київ</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Штори ПроФен. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
+            <p style="margin-top: 2rem; color: #ccc;">© 2024 Штори ПроФен. Всі права захищено.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Дякуємо за заявку! Ми зв\'яжемося з вами найближчим часом.');
+            event.target.reset();
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = '#fff';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
-8
